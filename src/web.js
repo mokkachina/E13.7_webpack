@@ -1,5 +1,5 @@
-const btn2 = document.querySelector('.comments')
-const myCom = document.querySelector("div");
+export const btn2 = document.querySelector('.comments')
+export const myCom = document.querySelector("div");
 
 btn2.addEventListener('click', () => fetch(' http://localhost:3000/comments')
     .then((response) => {
