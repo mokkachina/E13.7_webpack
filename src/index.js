@@ -1,3 +1,4 @@
+import {btn2, myCom} from "./web";
 const btn1 = document.querySelector('.posts')
 const myPost = document.querySelector("ul");
 
