@@ -1,4 +1,7 @@
 import {btn2, myCom} from "./web";
+
+import '/src/styles/styles.css';
+
 const btn1 = document.querySelector('.posts')
 const myPost = document.querySelector("ul");
 
