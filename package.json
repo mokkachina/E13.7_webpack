@@ -8,7 +8,9 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "start:json-server": "json-server --watch db.json",
-    "start:dev": "concurrently \"webpack serve --config webpack.dev.js\" \"json-server --watch db.json\""
+    "start:dev": "concurrently \"webpack serve --config webpack.dev.js\" \"json-server --watch db.json\"",
+    "prepare": "husky install",
+    "lint": "eslint . src config"
   },
   "keywords": [
     "webpack"
@@ -18,6 +20,7 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "css-loader": "^6.8.1",
+    "hasky": "^3.0.2",
     "html-webpack-plugin": "^5.5.4",
     "json-server": "^0.17.4",
     "mini-css-extract-plugin": "^2.7.6",
