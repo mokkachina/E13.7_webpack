@@ -10,7 +10,19 @@
     "start:json-server": "json-server --watch db.json",
     "start:dev": "concurrently \"webpack serve --config webpack.dev.js\" \"json-server --watch db.json\"",
     "prepare": "husky install",
-    "lint": "eslint . src config"
+    "lint": "eslint src",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "eslint --no-fix --quiet --max-warnings=0"
+    ]
   },
   "keywords": [
     "webpack"
@@ -18,8 +30,10 @@
   "author": "mokkachina",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "concurrently": "^8.2.2",
     "css-loader": "^6.8.1",
+    "eslint": "^4.19.1",
     "hasky": "^3.0.2",
     "html-webpack-plugin": "^5.5.4",
     "json-server": "^0.17.4",
